@@ -14,8 +14,8 @@
 <name>wedding-sim</name>
 <description>Demo project for Spring Boot</description>
 <properties>
-	<java.version>1.8</java.version> <!-- Use Java 8 for compatibility with Heroku -->
-	<maven.compiler.release>8</maven.compiler.release> <!-- Set the release property -->
+	<java.version>17</java.version>
+	<maven.compiler.release>17</maven.compiler.release>
 </properties>
 <dependencies>
 	<dependency>
@@ -36,7 +36,8 @@
 	<dependency>
 		<groupId>org.projectlombok</groupId>
 		<artifactId>lombok</artifactId>
-		<optional>true</optional>
+		<version>1.18.30</version>
+		<scope>provided</scope>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -58,10 +59,7 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
+						<exclude>org/projectlombok/lombok/**</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
